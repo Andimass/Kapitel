@@ -1,0 +1,8 @@
+# Устанавливаем LF (Unix-style line endings) для указанных файлов
+*.txt text eol=lf
+
+# Устанавливаем CRLF (Windows-style line endings) для указанных файлов
+*.md text eol=crlf
+
+# Игнорируем конвертацию для бинарных файлов
+*.png binary
