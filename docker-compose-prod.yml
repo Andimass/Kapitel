@@ -18,6 +18,11 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - .env
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - frontend_build:/frontend/build
   nginx:
     image: nginx:mainline-alpine
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
